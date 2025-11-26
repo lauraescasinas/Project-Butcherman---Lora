@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh5xjnjosm8xp"]
+
+[ext_resource type="Script" uid="uid://dya1q8ride4n0" path="res://death_scene.gd" id="1_6brm5"]
+[ext_resource type="Texture2D" uid="uid://doreobyorww80" path="res://Photos/DeathSceneBG1.jpeg" id="2_6brm5"]
+
+[sub_resource type="Theme" id="Theme_6brm5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6brm5")
+
+[node name="4e7Fc28532744Dde99DeAca50Bba7Bc3" type="Sprite2D" parent="."]
+position = Vector2(579.125, 246.25002)
+scale = Vector2(0.7764923, 0.8528912)
+texture = ExtResource("2_6brm5")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -3.0
+offset_top = 491.0
+offset_right = 1155.0
+offset_bottom = 645.0
+metadata/_edit_use_anchors_ = true
+
+[node name="EndButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 97.0
+offset_right = 1133.0
+offset_bottom = 136.0
+text = "Return to Main Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="StoryText" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 7.0
+offset_right = 974.0
+offset_bottom = 134.0
+theme = SubResource("Theme_6brm5")
+theme_type_variation = &"TooltipLabel"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor neque at magna sodales, id interdum erat facilisis. Curabitur egestas nisi vitae turpis fermentum, non consequat velit luctus.
+Medium (3 paragraphs):
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus, dolor at pulvinar porta, massa nisl tincidunt lacus, id finibus nisi metus vel purus. Suspendisse potenti. Vivamus facilisis ex non nisl pretium, ac gravida urna luctus."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/EndButton" to="." method="_on_end_button_pressed"]

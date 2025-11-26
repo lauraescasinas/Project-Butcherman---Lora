@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://cml7krljcmk34"]
+
+[ext_resource type="Texture2D" uid="uid://ct2nkttk3myx1" path="res://Photos/Captured.jpeg" id="1_cfnqe"]
+[ext_resource type="Script" uid="uid://osgah80afe0m" path="res://continue_button.gd" id="2_cfnqe"]
+
+[sub_resource type="Theme" id="Theme_1hblg"]
+
+[node name="NextScene" type="Node2D"]
+
+[node name="Captured" type="Sprite2D" parent="."]
+position = Vector2(577, 247.50002)
+scale = Vector2(0.7601572, 0.8282314)
+texture = ExtResource("1_cfnqe")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -3.0
+offset_top = 491.0
+offset_right = 1155.0
+offset_bottom = 645.0
+
+[node name="ContinueButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 992.0
+offset_top = 93.0
+offset_right = 1133.0
+offset_bottom = 140.0
+text = "Continue"
+script = ExtResource("2_cfnqe")
+
+[node name="StoryText" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 7.0
+offset_right = 974.0
+offset_bottom = 134.0
+theme = SubResource("Theme_1hblg")
+theme_type_variation = &"TooltipLabel"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor neque at magna sodales, id interdum erat facilisis. Curabitur egestas nisi vitae turpis fermentum, non consequat velit luctus.
+Medium (3 paragraphs):
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus, dolor at pulvinar porta, massa nisl tincidunt lacus, id finibus nisi metus vel purus. Suspendisse potenti. Vivamus facilisis ex non nisl pretium, ac gravida urna luctus."
+autowrap_mode = 2
+
+[connection signal="pressed" from="Panel/ContinueButton" to="Panel/ContinueButton" method="_on_pressed"]
