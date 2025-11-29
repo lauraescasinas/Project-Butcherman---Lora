@@ -9,7 +9,7 @@ extends Node
 
 
 # --- SETTINGS ---
-const MAX_GUESSES := 6
+const MAX_GUESSES := 5
 var word_list_day1 = ["APPLE", "ROBOT", "SNAKE"]
 var word_list_day2 = ["WATERFALL", "NOTEBOOK", "PYTHON"]
 var word_list_day3 = ["ASTRONOMY", "COMPUTER", "VOLCANO"]
@@ -200,13 +200,13 @@ func _on_continue_pressed():
 			# Player completed the final day → WIN THE ENTIRE GAME
 			print("[GAME] Completed all days! Changing scene...")
 			await get_tree().create_timer(0.8).timeout
-			get_tree().change_scene_to_file("res://EndScene1.tscn")
+			get_tree().change_scene_to_file("res://Scenes/EndScene1.tscn")
 
 	elif last_round_result == "lose":
 		# Reset to day 1
 		print("[DAY] Player lost. Resetting to Day 1")
 		current_day = 1
-		get_tree().change_scene_to_file("res://DeathScene.tscn")
+		get_tree().change_scene_to_file("res://Scenes/DeathScene.tscn")
 
 	else:
 		print("[ERROR] Continue pressed but no round result stored!")

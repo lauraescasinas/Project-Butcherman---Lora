@@ -1,0 +1,382 @@
+[gd_scene load_steps=12 format=3 uid="uid://d0yg1xr46lje1"]
+
+[ext_resource type="Script" uid="uid://brm7p6gshbjpu" path="res://game_play_scene.gd" id="1_q0gqs"]
+[ext_resource type="Texture2D" uid="uid://dfbjiv0yj88kh" path="res://Photos/ProtoType2.jpeg" id="2_4jtd1"]
+[ext_resource type="Texture2D" uid="uid://dgajyywj23bp8" path="res://Photos/GamePlayScene.png" id="2_frxao"]
+[ext_resource type="FontFile" uid="uid://xcsqkcqh8yb0" path="res://KeyboardFont.TTF" id="3_4jtd1"]
+[ext_resource type="FontFile" uid="uid://cgl1uqp4uqud0" path="res://ButtonFont.TTF" id="4_ftlg0"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3527d"]
+
+[sub_resource type="Theme" id="Theme_3527d"]
+default_font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftlg0"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_a7xop"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frxao"]
+bg_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+
+[sub_resource type="Theme" id="Theme_dli2k"]
+
+[node name="GamePlayScene" type="Node2D"]
+script = ExtResource("1_q0gqs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 781.0
+texture = ExtResource("2_frxao")
+expand_mode = 1
+
+[node name="ProtoType3" type="Sprite2D" parent="."]
+position = Vector2(856, 247)
+scale = Vector2(2.5159576, 2.2897196)
+texture = ExtResource("2_4jtd1")
+
+[node name="WordLabel" type="Label" parent="."]
+material = SubResource("CanvasItemMaterial_3527d")
+offset_left = 33.0
+offset_top = 111.0
+offset_right = 512.0
+offset_bottom = 187.0
+theme = SubResource("Theme_3527d")
+theme_override_fonts/font = ExtResource("3_4jtd1")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GuessedLetters" type="Label" parent="."]
+offset_left = 46.0
+offset_top = 437.0
+offset_right = 506.0
+offset_bottom = 508.0
+theme_override_fonts/font = ExtResource("3_4jtd1")
+
+[node name="Letters" type="GridContainer" parent="."]
+light_mask = 7
+offset_left = 55.0
+offset_top = 193.0
+offset_right = 408.0
+offset_bottom = 361.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 9
+
+[node name="A" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "A"
+
+[node name="B" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "B"
+
+[node name="C" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "C"
+
+[node name="D" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "D"
+
+[node name="E" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "E"
+
+[node name="F" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "F"
+
+[node name="G" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "G"
+
+[node name="H" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "H"
+
+[node name="I" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "I"
+
+[node name="J" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "J"
+
+[node name="K" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "K"
+
+[node name="L" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "L"
+
+[node name="M" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "M"
+
+[node name="N" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "N"
+
+[node name="O" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "O"
+
+[node name="P" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "P"
+
+[node name="Q" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "Q"
+
+[node name="R" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "R"
+
+[node name="S" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "S"
+
+[node name="T" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "T"
+
+[node name="U" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "U"
+
+[node name="V" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "V"
+
+[node name="W" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "W"
+
+[node name="X" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "X"
+
+[node name="Y" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "Y"
+
+[node name="Z" type="Button" parent="Letters"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
+text = "Z"
+
+[node name="DayFrame" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 51.0
+theme = SubResource("Theme_a7xop")
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("3_4jtd1")
+text = "Day 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UndoButton" type="Button" parent="."]
+offset_left = 58.0
+offset_top = 369.0
+offset_right = 205.0
+offset_bottom = 424.0
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_font_sizes/font_size = 22
+text = "UNDO
+"
+
+[node name="LosePanel" type="Panel" parent="."]
+offset_left = 641.0
+offset_top = 123.0
+offset_right = 1077.0
+offset_bottom = 451.0
+
+[node name="Title" type="Label" parent="LosePanel"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 76.0
+offset_right = 359.0
+offset_bottom = 145.0
+theme_override_fonts/font = ExtResource("4_ftlg0")
+
+[node name="ContinueButton" type="Button" parent="LosePanel"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 283.0
+offset_right = 414.0
+offset_bottom = 319.0
+theme_override_fonts/font = ExtResource("4_ftlg0")
+text = "Continue"
+
+[node name="ReturnMain" type="Button" parent="LosePanel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 282.0
+offset_right = 208.0
+offset_bottom = 317.0
+theme_override_fonts/font = ExtResource("4_ftlg0")
+text = "Return to Main Menu"
+
+[node name="Dialogue_Panel" type="Panel" parent="."]
+offset_left = 3.0
+offset_top = 492.0
+offset_right = 1150.0
+offset_bottom = 646.0
+
+[node name="Game_contButton" type="Button" parent="Dialogue_Panel"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 78.0
+offset_right = 1070.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("3_4jtd1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_frxao")
+text = "Continue"
+
+[node name="StoryText" type="Label" parent="Dialogue_Panel"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 9.0
+offset_right = 920.0
+offset_bottom = 136.0
+theme = SubResource("Theme_dli2k")
+theme_type_variation = &"TooltipLabel"
+text = "Lorem"
+autowrap_mode = 2
+
+[connection signal="pressed" from="LosePanel/ReturnMain" to="." method="_on_return_main_pressed"]

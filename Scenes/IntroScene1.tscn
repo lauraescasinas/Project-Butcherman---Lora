@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://cml7krljcmk34"]
+
+[ext_resource type="Texture2D" uid="uid://k6ukr8cdo1w4" path="res://Photos/IntroScene1.png" id="1_l74hx"]
+[ext_resource type="FontFile" uid="uid://xcsqkcqh8yb0" path="res://KeyboardFont.TTF" id="2_8snhc"]
+[ext_resource type="Script" uid="uid://osgah80afe0m" path="res://intro_1_cont_button.gd" id="2_47agh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g4dy"]
+bg_color = Color(0.21470258, 0.21470258, 0.21470246, 1)
+
+[sub_resource type="Theme" id="Theme_1hblg"]
+
+[node name="Intro_Scene1" type="Node2D"]
+
+[node name="Captured" type="Sprite2D" parent="."]
+position = Vector2(575.99994, 323.5)
+scale = Vector2(1.1191405, 0.842448)
+texture = ExtResource("1_l74hx")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 48.0
+offset_top = 378.0
+offset_right = 1099.0
+offset_bottom = 532.0
+
+[node name="Intro1_ContButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 903.0
+offset_top = 91.0
+offset_right = 1044.0
+offset_bottom = 138.0
+theme_override_fonts/font = ExtResource("2_8snhc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2g4dy")
+text = "Continue"
+script = ExtResource("2_47agh")
+
+[node name="StoryText" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 7.0
+offset_right = 974.0
+offset_bottom = 134.0
+theme = SubResource("Theme_1hblg")
+theme_type_variation = &"TooltipLabel"
+text = "Lorem"
+autowrap_mode = 2
+
+[connection signal="pressed" from="Panel/Intro1_ContButton" to="Panel/Intro1_ContButton" method="_on_pressed"]

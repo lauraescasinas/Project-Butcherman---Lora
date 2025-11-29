@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://8eorouef8qig"]
+
+[ext_resource type="Script" uid="uid://ihy3vfqxnvrl" path="res://main.gd" id="1_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://bwhnc68oia7fr" path="res://Photos/Game-Background_1.jpeg" id="2_8gbba"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0xm2m"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_bo1nx")
+
+[node name="GameBackground1" type="Sprite2D" parent="."]
+position = Vector2(575.5, 326.5)
+scale = Vector2(1.1240234, 0.84765625)
+texture = ExtResource("2_8gbba")
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 216.0
+offset_top = 120.0
+offset_right = 366.0
+offset_bottom = 177.0
+icon = SubResource("ViewportTexture_0xm2m")
+flat = true
+
+[node name="QuitButton" type="Button" parent="."]
+offset_left = 226.0
+offset_top = 283.0
+offset_right = 345.0
+offset_bottom = 327.0
+tooltip_text = "This is a quit button."
+flat = true
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
