@@ -1,47 +1,45 @@
 [gd_scene load_steps=6 format=3 uid="uid://bm0miw52yrtj4"]
 
-[ext_resource type="Texture2D" uid="uid://dy5nu3icnb1fa" path="res://Photos/IntroScene2.png" id="1_vsbxp"]
+[ext_resource type="Texture2D" uid="uid://cgmh63m7dor72" path="res://Photos/IntroScene2.png" id="1_vsbxp"]
 [ext_resource type="FontFile" uid="uid://xcsqkcqh8yb0" path="res://KeyboardFont.TTF" id="2_51hp2"]
 [ext_resource type="Script" uid="uid://x73l362kgmyl" path="res://Scenes/intro_2_cont_button.gd" id="3_vsbxp"]
+
+[sub_resource type="Theme" id="Theme_qs6rl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb8pk"]
 bg_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
 
-[sub_resource type="Theme" id="Theme_qs6rl"]
-
 [node name="IntroScene2" type="Node2D"]
 
-[node name="Captured" type="Sprite2D" parent="."]
-position = Vector2(575.99994, 323.5)
-scale = Vector2(1.1191405, 0.842448)
+[node name="Dismembered(5)" type="Sprite2D" parent="."]
+position = Vector2(512, 384)
 texture = ExtResource("1_vsbxp")
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 48.0
-offset_top = 378.0
-offset_right = 1099.0
-offset_bottom = 532.0
-
-[node name="Intro2_ContButton" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 903.0
-offset_top = 91.0
-offset_right = 1044.0
-offset_bottom = 138.0
-theme_override_fonts/font = ExtResource("2_51hp2")
-theme_override_styles/normal = SubResource("StyleBoxFlat_bb8pk")
-text = "Continue"
-script = ExtResource("3_vsbxp")
-
-[node name="StoryText" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 7.0
-offset_right = 974.0
-offset_bottom = 134.0
+[node name="StoryText" type="Label" parent="Dismembered(5)"]
+offset_left = -417.0
+offset_top = 255.0
+offset_right = 496.0
+offset_bottom = 373.0
 theme = SubResource("Theme_qs6rl")
 theme_type_variation = &"TooltipLabel"
 text = "Lorem"
 autowrap_mode = 2
 
-[connection signal="pressed" from="Panel/Intro2_ContButton" to="Panel/Intro2_ContButton" method="_on_pressed"]
+[node name="Intro2_ContButton" type="Button" parent="Dismembered(5)"]
+offset_left = 316.0
+offset_top = 287.0
+offset_right = 457.0
+offset_bottom = 334.0
+theme_override_fonts/font = ExtResource("2_51hp2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bb8pk")
+text = "Continue"
+script = ExtResource("3_vsbxp")
+
+[node name="Panel" type="Panel" parent="Dismembered(5)"]
+visible = false
+offset_left = -728.0
+offset_top = 109.0
+offset_right = 323.0
+offset_bottom = 263.0
+
+[connection signal="pressed" from="Dismembered(5)/Intro2_ContButton" to="Dismembered(5)/Intro2_ContButton" method="_on_pressed"]

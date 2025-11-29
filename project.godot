@@ -10,13 +10,15 @@ config_version=5
 
 [application]
 
-config/name="Butcherman_GameTest1"
+config/name="Project Butcherman Collab Work Repo Main (1)"
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="uid://8xns13l2v8sx"
 
 [display]
 
+window/size/viewport_width=1024
+window/size/viewport_height=768
 window/stretch/aspect="keep_width"
 
 [rendering]

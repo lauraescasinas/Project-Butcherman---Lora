@@ -1,33 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://8eorouef8qig"]
+[gd_scene load_steps=5 format=3 uid="uid://8eorouef8qig"]
 
 [ext_resource type="Script" uid="uid://ihy3vfqxnvrl" path="res://main.gd" id="1_bo1nx"]
-[ext_resource type="Texture2D" uid="uid://bwhnc68oia7fr" path="res://Photos/Game-Background_1.jpeg" id="2_8gbba"]
+[ext_resource type="Texture2D" uid="uid://bmsp3pivi0wuy" path="res://Photos/Butcherman.png" id="2_bo1nx"]
+[ext_resource type="AudioStream" uid="uid://cjdpibe4ajp3s" path="res://Music/Menu Music.wav" id="3_8gbba"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_0xm2m"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_bo1nx")
 
-[node name="GameBackground1" type="Sprite2D" parent="."]
-position = Vector2(575.5, 326.5)
-scale = Vector2(1.1240234, 0.84765625)
-texture = ExtResource("2_8gbba")
+[node name="Dismembered(1)" type="Sprite2D" parent="."]
+position = Vector2(512, 385)
+texture = ExtResource("2_bo1nx")
 
-[node name="PlayButton" type="Button" parent="."]
-offset_left = 216.0
-offset_top = 120.0
-offset_right = 366.0
-offset_bottom = 177.0
+[node name="PlayButton" type="Button" parent="Dismembered(1)"]
+anchors_preset = -1
+anchor_left = 0.24200001
+anchor_top = 0.23400001
+anchor_right = 0.24200001
+anchor_bottom = 0.23400001
+offset_left = -559.80804
+offset_top = -406.712
+offset_right = -464.80804
+offset_bottom = -361.712
 icon = SubResource("ViewportTexture_0xm2m")
 flat = true
 
-[node name="QuitButton" type="Button" parent="."]
-offset_left = 226.0
-offset_top = 283.0
-offset_right = 345.0
-offset_bottom = 327.0
+[node name="QuitButton" type="Button" parent="Dismembered(1)"]
+anchors_preset = -1
+anchor_left = 0.24100001
+anchor_top = 0.40600002
+anchor_right = 0.24100001
+anchor_bottom = 0.40600002
+offset_left = -553.784
+offset_top = -403.808
+offset_right = -469.784
+offset_bottom = -363.808
 tooltip_text = "This is a quit button."
 flat = true
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8gbba")
+volume_db = -2.786
+autoplay = true
+
+[connection signal="pressed" from="Dismembered(1)/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Dismembered(1)/QuitButton" to="." method="_on_quit_button_pressed"]

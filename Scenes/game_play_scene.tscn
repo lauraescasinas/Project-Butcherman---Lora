@@ -1,20 +1,24 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0yg1xr46lje1"]
+[gd_scene load_steps=16 format=3 uid="uid://d0yg1xr46lje1"]
 
 [ext_resource type="Script" uid="uid://brm7p6gshbjpu" path="res://game_play_scene.gd" id="1_q0gqs"]
-[ext_resource type="Texture2D" uid="uid://dfbjiv0yj88kh" path="res://Photos/ProtoType2.jpeg" id="2_4jtd1"]
-[ext_resource type="Texture2D" uid="uid://dgajyywj23bp8" path="res://Photos/GamePlayScene.png" id="2_frxao"]
+[ext_resource type="Texture2D" uid="uid://bkrd4h3hptpd2" path="res://Photos/GamePlayScene.png" id="2_frxao"]
 [ext_resource type="FontFile" uid="uid://xcsqkcqh8yb0" path="res://KeyboardFont.TTF" id="3_4jtd1"]
 [ext_resource type="FontFile" uid="uid://cgl1uqp4uqud0" path="res://ButtonFont.TTF" id="4_ftlg0"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3527d"]
-
-[sub_resource type="Theme" id="Theme_3527d"]
-default_font_size = 20
+[ext_resource type="Texture2D" uid="uid://ciihkhkvppyex" path="res://Photos/Lives/Head.png" id="5_rfioy"]
+[ext_resource type="Texture2D" uid="uid://cdm3l37hjgfjd" path="res://Photos/Lives/Left Foot.png" id="6_l37oj"]
+[ext_resource type="Texture2D" uid="uid://bi1scb4rsjoku" path="res://Photos/Lives/Right Hand.png" id="7_ydirw"]
+[ext_resource type="Texture2D" uid="uid://chfjvtid856r2" path="res://Photos/Lives/Left Hand.png" id="8_vx3cq"]
+[ext_resource type="Texture2D" uid="uid://dcagkrxa2uftj" path="res://Photos/Lives/Right Foot.png" id="9_75wbv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftlg0"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_a7xop"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3527d"]
+
+[sub_resource type="Theme" id="Theme_3527d"]
+default_font_size = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frxao"]
 bg_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -24,42 +28,16 @@ bg_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
 [node name="GamePlayScene" type="Node2D"]
 script = ExtResource("1_q0gqs")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1153.0
-offset_bottom = 781.0
+[node name="GamePlayScene" type="Sprite2D" parent="."]
+position = Vector2(513, 383)
 texture = ExtResource("2_frxao")
-expand_mode = 1
-
-[node name="ProtoType3" type="Sprite2D" parent="."]
-position = Vector2(856, 247)
-scale = Vector2(2.5159576, 2.2897196)
-texture = ExtResource("2_4jtd1")
-
-[node name="WordLabel" type="Label" parent="."]
-material = SubResource("CanvasItemMaterial_3527d")
-offset_left = 33.0
-offset_top = 111.0
-offset_right = 512.0
-offset_bottom = 187.0
-theme = SubResource("Theme_3527d")
-theme_override_fonts/font = ExtResource("3_4jtd1")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="GuessedLetters" type="Label" parent="."]
-offset_left = 46.0
-offset_top = 437.0
-offset_right = 506.0
-offset_bottom = 508.0
-theme_override_fonts/font = ExtResource("3_4jtd1")
 
 [node name="Letters" type="GridContainer" parent="."]
 light_mask = 7
-offset_left = 55.0
-offset_top = 193.0
-offset_right = 408.0
-offset_bottom = 361.0
+offset_left = 96.0
+offset_top = 240.0
+offset_right = 451.0
+offset_bottom = 374.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 9
@@ -299,10 +277,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ftlg0")
 text = "Z"
 
 [node name="DayFrame" type="Label" parent="."]
-offset_left = 38.0
-offset_top = 8.0
-offset_right = 128.0
-offset_bottom = 51.0
+offset_left = 31.0
+offset_top = 36.0
+offset_right = 126.0
+offset_bottom = 79.0
 theme = SubResource("Theme_a7xop")
 theme_type_variation = &"HeaderLarge"
 theme_override_fonts/font = ExtResource("3_4jtd1")
@@ -311,20 +289,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="UndoButton" type="Button" parent="."]
-offset_left = 58.0
-offset_top = 369.0
-offset_right = 205.0
-offset_bottom = 424.0
+offset_left = 207.0
+offset_top = 404.0
+offset_right = 331.0
+offset_bottom = 455.0
 theme_override_fonts/font = ExtResource("3_4jtd1")
 theme_override_font_sizes/font_size = 22
 text = "UNDO
 "
 
 [node name="LosePanel" type="Panel" parent="."]
-offset_left = 641.0
-offset_top = 123.0
-offset_right = 1077.0
-offset_bottom = 451.0
+visible = false
+offset_left = 436.0
+offset_top = 166.0
+offset_right = 872.0
+offset_bottom = 494.0
 
 [node name="Title" type="Label" parent="LosePanel"]
 layout_mode = 0
@@ -352,31 +331,75 @@ offset_bottom = 317.0
 theme_override_fonts/font = ExtResource("4_ftlg0")
 text = "Return to Main Menu"
 
+[node name="WordLabel" type="Label" parent="."]
+material = SubResource("CanvasItemMaterial_3527d")
+offset_left = 32.0
+offset_top = 135.0
+offset_right = 511.0
+offset_bottom = 209.0
+theme = SubResource("Theme_3527d")
+theme_override_fonts/font = ExtResource("3_4jtd1")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GuessedLetters" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 500.0
+offset_right = 441.0
+offset_bottom = 575.0
+theme_override_fonts/font = ExtResource("3_4jtd1")
+
 [node name="Dialogue_Panel" type="Panel" parent="."]
-offset_left = 3.0
-offset_top = 492.0
-offset_right = 1150.0
-offset_bottom = 646.0
+offset_left = 191.0
+offset_top = 603.0
+offset_right = 974.0
+offset_bottom = 722.0
 
 [node name="Game_contButton" type="Button" parent="Dialogue_Panel"]
 layout_mode = 0
-offset_left = 929.0
-offset_top = 78.0
-offset_right = 1070.0
-offset_bottom = 125.0
+offset_left = 642.0
+offset_top = 73.0
+offset_right = 783.0
+offset_bottom = 120.0
 theme_override_fonts/font = ExtResource("3_4jtd1")
 theme_override_styles/normal = SubResource("StyleBoxFlat_frxao")
 text = "Continue"
 
 [node name="StoryText" type="Label" parent="Dialogue_Panel"]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 9.0
-offset_right = 920.0
-offset_bottom = 136.0
+offset_left = 31.0
+offset_top = 22.0
+offset_right = 748.0
+offset_bottom = 100.0
 theme = SubResource("Theme_dli2k")
 theme_type_variation = &"TooltipLabel"
 text = "Lorem"
 autowrap_mode = 2
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(972, 55.5)
+scale = Vector2(0.63999885, 0.65000004)
+texture = ExtResource("5_rfioy")
+
+[node name="LeftFoot" type="Sprite2D" parent="."]
+position = Vector2(904.75006, 56)
+scale = Vector2(0.6299985, 0.6333334)
+texture = ExtResource("6_l37oj")
+
+[node name="RightHand" type="Sprite2D" parent="."]
+position = Vector2(706.5, 55.499996)
+scale = Vector2(0.6199997, 0.61666656)
+texture = ExtResource("7_ydirw")
+
+[node name="LeftHand" type="Sprite2D" parent="."]
+position = Vector2(771, 55)
+scale = Vector2(0.64000106, 0.6333333)
+texture = ExtResource("8_vx3cq")
+
+[node name="RightFoot" type="Sprite2D" parent="."]
+position = Vector2(837.5, 55.5)
+scale = Vector2(0.62000084, 0.6166667)
+texture = ExtResource("9_75wbv")
 
 [connection signal="pressed" from="LosePanel/ReturnMain" to="." method="_on_return_main_pressed"]

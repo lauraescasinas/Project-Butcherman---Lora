@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh5xjnjosm8xp"]
 
 [ext_resource type="Script" uid="uid://dya1q8ride4n0" path="res://death_scene.gd" id="1_6brm5"]
-[ext_resource type="Texture2D" uid="uid://doreobyorww80" path="res://Photos/DeathSceneBG1.jpeg" id="2_6brm5"]
+[ext_resource type="Texture2D" uid="uid://doreobyorww80" path="res://Photos/Lose.jpeg" id="2_6brm5"]
 
 [sub_resource type="Theme" id="Theme_6brm5"]
 

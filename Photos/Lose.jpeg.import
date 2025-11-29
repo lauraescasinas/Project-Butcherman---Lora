@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkrd4h3hptpd2"
-path="res://.godot/imported/GamePlayScene.png-1a4f629b883ce3e450ba2ba63c21e3d6.ctex"
+uid="uid://doreobyorww80"
+path="res://.godot/imported/Lose.jpeg-b2852eb6a4fa9a50ac7527618cd62982.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Photos/GamePlayScene.png"
-dest_files=["res://.godot/imported/GamePlayScene.png-1a4f629b883ce3e450ba2ba63c21e3d6.ctex"]
+source_file="res://Photos/Lose.jpeg"
+dest_files=["res://.godot/imported/Lose.jpeg-b2852eb6a4fa9a50ac7527618cd62982.ctex"]
 
 [params]
 
